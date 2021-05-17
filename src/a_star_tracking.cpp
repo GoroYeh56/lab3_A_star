@@ -1009,7 +1009,7 @@ int main(int argc, char **argv)
                 // for(int i=6; i<Path.size(); i+=6){
                 for(int i=4; i<Path.size(); i+=4){
                 // for(int i=0; i<Path.size(); i++){
-                    
+                    i = (i+4 >= Path.size()-1)? Path.size()-1:i;
                     goal_x = (float)Path[i].x/10  ; // Convert to meter unit
                     goal_y = (float)Path[i].y/10  ; // Since we use (10cm) in Path.x,.y. Convert to "m" !
                     goal_theta = 0; // TODO: Don't know orientation! XD
